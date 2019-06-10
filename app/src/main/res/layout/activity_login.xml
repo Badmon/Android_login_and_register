@@ -22,33 +22,33 @@
         />
 
     <EditText
+        android:id="@+id/TV_usu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Usuario:"
-        android:textSize="22sp"
         android:inputType="text" />
 
     <EditText
+        android:id="@+id/TV_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password:"
-        android:textSize="22sp"
         android:inputType="textPassword" />
 
     <Button
+        android:id="@+id/btn_iniciar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Iniciar"
-        android:layout_marginVertical="10sp"
+
         android:layout_gravity="center"/>
 
     <TextView
         android:id="@+id/tv_registrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="20sp"
         android:text="Registrar"
         android:layout_gravity="center"
-        android:textSize="22sp"/>
+        />
 
 </LinearLayout>

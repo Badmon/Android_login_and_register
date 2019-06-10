@@ -33,7 +33,6 @@
             android:textSize="22sp"
             android:text=""/>
 
-
     </LinearLayout>
 
     <LinearLayout
@@ -55,7 +54,6 @@
             android:textSize="22sp"
             android:text=""/>
 
-
     </LinearLayout>
 
     <LinearLayout
@@ -71,12 +69,33 @@
             android:textSize="22sp"/>
 
         <TextView
-            android:id="@+id/TextV_Password"
+            android:id="@+id/TextV_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="22sp"
             android:text=""/>
 
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edad: "
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/TextV_edad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text=""/>
 
     </LinearLayout>
 
