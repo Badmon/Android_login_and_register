@@ -5,50 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Registro">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LOGIN"
+        android:text="REGISTRO DE USUARIO"
+        android:textSize="25sp"
         android:layout_gravity="center"
-        android:textSize="24sp"/>
-
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:src="@drawable/log"
+        
+        />
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Usuario"
+        android:inputType="text"
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Usuario:"
-        android:textSize="22sp"
-        android:inputType="text" />
+        android:hint="Password"
+        android:inputType="text"
+        />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password:"
-        android:textSize="22sp"
-        android:inputType="textPassword" />
+        android:hint="Edad"
+        android:inputType="number"
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Iniciar"
-        android:layout_marginVertical="10sp"
-        android:layout_gravity="center"/>
-
-    <TextView
-        android:id="@+id/tv_registrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20sp"
-        android:text="Registrar"
         android:layout_gravity="center"
-        android:textSize="22sp"/>
+        android:text="Registrar"/>
+
 
 </LinearLayout>
