@@ -13,7 +13,6 @@
         android:text="REGISTRO DE USUARIO"
         android:textSize="25sp"
         android:layout_gravity="center"
-        
         />
     
     <EditText
