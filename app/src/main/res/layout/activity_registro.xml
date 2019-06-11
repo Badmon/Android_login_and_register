@@ -36,11 +36,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:inputType=""
+        android:inputType="text"
         />
 
     <EditText
-        android:id="@+id/EdiT_edad"
+        android:id="@+id/EdiT_age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Edad"
@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="REGISTRAR"/>
+        android:text="REGISTRO"/>
 
 
 </LinearLayout>

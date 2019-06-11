@@ -31,10 +31,9 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         enombre = findViewById(R.id.EditT_nombre);
         eusuario = findViewById(R.id.EditT_usu);
         epassword = findViewById(R.id.EditT_password);
-        eage = findViewById(R.id.EdiT_edad);
+        eage = findViewById(R.id.EdiT_age);
 
         btn_registrar = findViewById(R.id.btn_registrar);
-
         btn_registrar.setOnClickListener(this);
 
     }
@@ -44,10 +43,10 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
 
         final String name=enombre.getText().toString();
         final String username=eusuario.getText().toString();
-        final int age=Integer.parseInt(eage.getText().toString());
         final String password=epassword.getText().toString();
+        final int age=Integer.parseInt(eage.getText().toString());
 
-        Response.Listener<String> respoListener = new Response.Listener<String>() {
+        Response.Listener<String> respoListener =  new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
