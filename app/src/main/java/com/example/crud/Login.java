@@ -35,7 +35,6 @@ public class Login extends AppCompatActivity {
         btn_log = findViewById(R.id.btn_ingresar);
 
         tv_registrar = findViewById(R.id.tv_registrar);
-
         tv_registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
