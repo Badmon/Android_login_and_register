@@ -25,3 +25,6 @@ public class RegisterRequest extends StringRequest {
         return params;
     }
 }
+
+//android:usesCleartextTraffic="true" CUANDO TENEMOS PROBLEMA CON EL HTTP
+//AGREGAR AL MANIFEST

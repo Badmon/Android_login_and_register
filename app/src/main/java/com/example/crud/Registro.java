@@ -8,15 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.net.ResponseCache;
 
 public class Registro extends AppCompatActivity implements View.OnClickListener {
 
@@ -46,9 +43,11 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         final String password=epassword.getText().toString();
         final int age=Integer.parseInt(eage.getText().toString());
 
+
         Response.Listener<String> respoListener =   new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
                     boolean success = jsonResponse.getBoolean("success");

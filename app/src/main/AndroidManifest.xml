@@ -4,7 +4,7 @@
     package="com.example.crud">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    //android:usesCleartextTraffic="true" CUANDO TENEMOS PROBLEMA CON EL HTTP
+
 
     <application
         android:allowBackup="true"
