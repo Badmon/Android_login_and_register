@@ -51,10 +51,10 @@ public class Login extends AppCompatActivity {
 
                 if (eusername.getText().toString().isEmpty()) {
                     Toast.makeText(Login.this, "INGRESAR USUARIO", Toast.LENGTH_SHORT).show();
-                }else{
-                    if(epassword.getText().toString().isEmpty())
+                }else
+                    if(epassword.getText().toString().isEmpty()) {
                         Toast.makeText(Login.this, "INGRESAR PASSWORD", Toast.LENGTH_SHORT).show();
-                }
+                    }
 
 
                 final String username = eusername.getText().toString();

@@ -33,7 +33,6 @@ public class Usuario extends AppCompatActivity {
         textView_age.setText(age+"");
         textView_password.setText(password);
 
-
     }
 
 }
