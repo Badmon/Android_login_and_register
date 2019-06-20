@@ -43,7 +43,6 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         final String password=epassword.getText().toString();
         final int age=Integer.parseInt(eage.getText().toString());
 
-
         Response.Listener<String> respoListener =   new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -51,7 +50,6 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
                     boolean success = jsonResponse.getBoolean("success");
-
                     if (success){
                             Intent intent = new Intent(Registro.this,Login.class);
                             Registro.this.startActivity(intent);
@@ -61,7 +59,6 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
                                 .setNegativeButton("Retry",null)
                                 .create().show();
                     }
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

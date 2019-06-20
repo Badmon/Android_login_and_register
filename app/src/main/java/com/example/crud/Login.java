@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -34,6 +35,7 @@ public class Login extends AppCompatActivity {
         btn_log = findViewById(R.id.btn_ingresar);
 
         tv_registrar = findViewById(R.id.tv_registrar);
+
         tv_registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,6 +48,10 @@ public class Login extends AppCompatActivity {
         btn_log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if (eusername.getText().toString().isEmpty() && eusername.getText().toString().isEmpty()) {
+                    Toast.makeText(Login.this, "Debe ingresar usernombre y password", Toast.LENGTH_SHORT).show();
+                }
 
                 final String username = eusername.getText().toString();
                 final String password = epassword.getText().toString();
