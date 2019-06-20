@@ -46,7 +46,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener 
         final String password=epassword.getText().toString();
         final int age=Integer.parseInt(eage.getText().toString());
 
-        Response.Listener<String> respoListener =  new Response.Listener<String>() {
+        Response.Listener<String> respoListener =   new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
