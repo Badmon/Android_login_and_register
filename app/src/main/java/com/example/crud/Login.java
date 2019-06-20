@@ -11,7 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -66,13 +68,11 @@ public class Login extends AppCompatActivity {
 
                                 Login.this.startActivity(intent);
 
-
                             }else{
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
                                 builder.setMessage("Error Login")
                                         .setNegativeButton("Retry",null)
                                         .create().show();
-
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -81,11 +81,10 @@ public class Login extends AppCompatActivity {
                 };
 
                 LoginRequest loginRequest = new LoginRequest(username,password,responseListener);
-
+                RequestQueue queue = Volley.newRequestQueue(Login.this);
+                queue.add(loginRequest);
 
             }
         });
-
-
     }
 }
