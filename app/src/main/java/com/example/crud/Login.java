@@ -1,9 +1,11 @@
 package com.example.crud;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -53,8 +55,23 @@ public class Login extends AppCompatActivity {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
                             if(success){
+                                String name = jsonResponse.getString("name");
+                                String age = jsonResponse.getString("age");
+
+                                Intent intent = new Intent(Login.this, Usuario.class);
+                                intent.putExtra("name",name);
+                                intent.putExtra("username",username);
+                                intent.putExtra("age",name);
+                                intent.putExtra("password",password);
+
+                                Login.this.startActivity(intent);
+
 
                             }else{
+                                AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
+                                builder.setMessage("Error Login")
+                                        .setNegativeButton("Retry",null)
+                                        .create().show();
 
                             }
                         } catch (JSONException e) {
