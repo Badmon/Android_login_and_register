@@ -49,9 +49,13 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (eusername.getText().toString().isEmpty() && eusername.getText().toString().isEmpty()) {
-                    Toast.makeText(Login.this, "Debe ingresar usernombre y password", Toast.LENGTH_SHORT).show();
+                if (eusername.getText().toString().isEmpty()) {
+                    Toast.makeText(Login.this, "Debe ingresar usernombre", Toast.LENGTH_SHORT).show();
+                }else{
+                    if(epassword.getText().toString().isEmpty())
+                        Toast.makeText(Login.this, "Debe ingresar password", Toast.LENGTH_SHORT).show();
                 }
+
 
                 final String username = eusername.getText().toString();
                 final String password = epassword.getText().toString();
@@ -76,8 +80,8 @@ public class Login extends AppCompatActivity {
 
                             }else{
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
-                                builder.setMessage("Error Login")
-                                        .setNegativeButton("Retry",null)
+                                builder.setMessage("No existe el usuario")
+                                        .setNegativeButton("Intentar de nuevo",null)
                                         .create().show();
                             }
                         } catch (JSONException e) {
