@@ -56,12 +56,12 @@ public class Login extends AppCompatActivity {
                             boolean success = jsonResponse.getBoolean("success");
                             if(success){
                                 String name = jsonResponse.getString("name");
-                                String age = jsonResponse.getString("age");
+                                int age = jsonResponse.getInt("age");
 
                                 Intent intent = new Intent(Login.this, Usuario.class);
                                 intent.putExtra("name",name);
                                 intent.putExtra("username",username);
-                                intent.putExtra("age",name);
+                                intent.putExtra("age",age);
                                 intent.putExtra("password",password);
 
                                 Login.this.startActivity(intent);
@@ -80,7 +80,7 @@ public class Login extends AppCompatActivity {
                     }
                 };
 
-                LoginRequest loginRequest = new LoginRequest(username,password,)
+                LoginRequest loginRequest = new LoginRequest(username,password,responseListener);
 
 
             }
