@@ -50,10 +50,10 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (eusername.getText().toString().isEmpty()) {
-                    Toast.makeText(Login.this, "Debe ingresar usernombre", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this, "INGRESAR USUARIO", Toast.LENGTH_SHORT).show();
                 }else{
                     if(epassword.getText().toString().isEmpty())
-                        Toast.makeText(Login.this, "Debe ingresar password", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this, "INGRESAR PASSWORD", Toast.LENGTH_SHORT).show();
                 }
 
 
